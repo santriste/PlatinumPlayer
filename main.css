@@ -57,7 +57,6 @@ body {
     align-items: center;
     padding: 20px;
     width: 250px;
-    /* height: 100%; Remove height 100% as it's not needed */
 }
 
 .card-img-top {
