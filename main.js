@@ -130,7 +130,6 @@ if (!localStorage.getItem('albums')) {
           "Tracks/In Rainbows/10 - Videotape.mp3"
         ]
       }
-      // Add more albums here if needed
     ];
   
     localStorage.setItem('albums', JSON.stringify(albums));
