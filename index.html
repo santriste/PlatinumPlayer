@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umbrella</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="images/Logo.png">
+        </a>
+        <a class="navbar-brand" href="index.html">Inicio</a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Top 50</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Nuevos</a></li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 mx-auto">
+            <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Buscar...">
+        </form>
+        <div class="ml-auto">
+            <button class="btn btn-outline-light">Registrarse</button>
+            <button class="btn btn-outline-light">Iniciar Sesión</button>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="row" id="albumCardsContainer"></div>
+    </div>
+
+    <footer class="footer-player">
+        <div class="player-info">
+            <div class="player-thumbnail">
+                <img src="" alt="Album Thumbnail" id="playerThumbnail">
+            </div>
+            <div class="player-details">
+                <p class="player-title" id="playerTitle">Song Title</p>
+                <p class="player-artist" id="playerArtist">Artist Name</p>
+            </div>
+        </div>
+        <audio id="audioPlayer" controls>
+            <source id="audioSource" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="player-controls">
+            <button class="btn btn-outline-light" onclick="playPause()">Play/Pause</button>
+            <button class="btn btn-outline-light" onclick="prevSong()">Previous</button>
+            <button class="btn btn-outline-light" onclick="nextSong()">Next</button>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
