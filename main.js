@@ -83,3 +83,26 @@ fetch('albums.json')
         updatePlayer(0); 
     })
     .catch(error => console.error('Error al cargar el archivo JSON:', error));
+
+
+function filterCards() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        const artist = card.getAttribute('data-artist').toLowerCase();
+        const cardElement = card.parentElement;
+
+        if (title.includes(input) || artist.includes(input)) {
+            cardElement.style.display = 'block';
+        } else {
+            cardElement.style.display = 'none';
+        }
+    });
+}
+
+
+document.getElementById('searchInput').addEventListener('input', filterCards);
+
+
