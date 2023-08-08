@@ -53,11 +53,62 @@
       ]
     },
     {
-      "title": "For Those Who Have Heart",
-      "artist": "A Day to Remember",
-      "thumbnail": "images/Dying Is Your Latest Fashion.jpg",
+      "title": "All Hope Is Gone",
+      "artist": "Slipknot",
+      "thumbnail": "images/All Hope Is Gone.jpg",
       "songs": [
-        "Tracks/Dying Is Your Latest Fashion/01 The Webs We Weave"
+        "Tracks/All Hope Is Gone/01 - .execute..mp3",
+        "Tracks/All Hope Is Gone/02 - Gematria (The Killing Name).mp3",
+        "Tracks/All Hope Is Gone/03 - Sulfur.mp3",
+        "Tracks/All Hope Is Gone/04 - Psychosocial.mp3",
+        "Tracks/All Hope Is Gone/05 - Dead Memories.mp3",
+        "Tracks/All Hope Is Gone/06 - Vendetta.mp3",
+        "Tracks/All Hope Is Gone/07 - Butcher's Hook.mp3",
+        "Tracks/All Hope Is Gone/08 - Gehenna.mp3",
+        "Tracks/All Hope Is Gone/09 - This Cold Black.mp3",
+        "Tracks/All Hope Is Gone/10 - Wherein Lies Continue.mp3",
+        "Tracks/All Hope Is Gone/11 - Snuff.mp3",
+        "Tracks/All Hope Is Gone/12 - All Hope Is Gone.mp3"
       ]
-    }
+    },
+  {
+    "title": "Count Your Blessings",
+    "artist": "Bring Me The Horizon",
+    "thumbnail": "images/Count Your Blessings.jpg",
+    "songs": [
+      "Tracks/Count Your Blessings/01 - Pray For Plagues.mp3",
+      "Tracks/Count Your Blessings/02 - Tell Slater Not To Wash His Dick.mp3",
+      "Tracks/Count Your Blessings/03 - Braille (For Stevie's Wonders Eyes Only).mp3",
+      "Tracks/Count Your Blessings/04 - A Lot Like Vegas.mp3",
+      "Tracks/Count Your Blessings/05 - Black & Blue.mp3",
+      "Tracks/Count Your Blessings/06 - Slow Dance.mp3",
+      "Tracks/Count Your Blessings/07 - Liquor & Love Lost.mp3",
+      "Tracks/Count Your Blessings/08 - (I Used To Make Out With) Medusa.mp3",
+      "Tracks/Count Your Blessings/09 - Fifteen Fathoms, Counting.mp3",
+      "Tracks/Count Your Blessings/10 - Off The Heezay.mp3"
+    ]
+  },
+{
+  "title": "Significant Other",
+  "artist": "Limp Bizkit",
+  "thumbnail": "images/Significant Other.jpg",
+  "songs": [
+    "Tracks/Significant Other/01 - Intro.mp3",
+    "Tracks/Significant Other/02 - Just Like This.mp3",
+    "Tracks/Significant Other/03 - Nookie.mp3",
+    "Tracks/Significant Other/04 - Break Stuff.mp3",
+    "Tracks/Significant Other/05 - Re-Arranged.mp3",
+    "Tracks/Significant Other/06 - I'm Broke.mp3",
+    "Tracks/Significant Other/07 - Nobody Like You.mp3",
+    "Tracks/Significant Other/08 - Don't Go Off Wandering.mp3",
+    "Tracks/Significant Other/09 - 9 Teen 90 Nine.mp3",
+    "Tracks/Significant Other/10 - N 2 Gether Now.mp3",
+    "Tracks/Significant Other/11 - Trust?.mp3",
+    "Tracks/Significant Other/12 - No Sex.mp3",
+    "Tracks/Significant Other/13 - Show Me What You Got.mp3",
+    "Tracks/Significant Other/14 - A Lesson Learned.mp3",
+    "Tracks/Significant Other/15 - Outro.mp3"
   ]
+  }
+
+]
