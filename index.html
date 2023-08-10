@@ -10,21 +10,11 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            <img class="logo" src="images/Logo.png">
-        </a>
-        <a class="navbar-brand" href="index.html">Inicio</a>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Top 50</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Nuevos</a></li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0 mx-auto">
-            <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Buscar...">
-        </form>
-        <div class="ml-auto">
-            <button class="btn btn-outline-light">Registrarse</button>
-            <button class="btn btn-outline-light">Iniciar Sesión</button>
+    <nav class="custom-navbar">
+        <div class="custom-container">
+            <form class="custom-form">
+                <input class="custom-input" type="search" id="searchInput" placeholder="Buscar...">
+            </form>
         </div>
     </nav>
     <div class="container mt-4">
@@ -49,6 +39,7 @@
             <button class="btn btn-outline-light" onclick="prevSong()">Previous</button>
             <button class="btn btn-outline-light" onclick="nextSong()">Next</button>
         </div>
+        
     </footer>
 
     <script src="main.js"></script>

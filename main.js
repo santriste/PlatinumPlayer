@@ -9,7 +9,6 @@ let currentAlbumIndex = 0;
 let currentSongIndex = 0;
 let isPlaying = false;
 
-// Función para crear las cards de los discos
 function createAlbumCards(albums) {
   const albumCardsContainer = document.getElementById('albumCardsContainer');
 
@@ -35,6 +34,9 @@ function loadSong(albumIndex, songIndex) {
   currentSongIndex = songIndex;
   const currentAlbum = albums[currentAlbumIndex];
   const currentSong = currentAlbum.songs[currentSongIndex];
+
+  localStorage.setItem('lastSong', JSON.stringify({ albumIndex, songIndex }));
+
   audioSource.src = currentSong;
   audioPlayer.load();
   audioPlayer.play();
@@ -46,7 +48,7 @@ function updatePlayer() {
   const currentSong = currentAlbum.songs[currentSongIndex];
 
   playerThumbnail.src = currentAlbum.thumbnail;
-  playerTitle.textContent = currentAlbum.title;
+  playerTitle.textContent = currentSong.split('/').pop().replace('.mp3', '');
   playerArtist.textContent = currentAlbum.artist;
 
   if (isPlaying) {
@@ -75,22 +77,20 @@ function prevSong() {
 
 audioPlayer.addEventListener('ended', nextSong);
 
-if (!localStorage.getItem('albums')) {
-  fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-      albums = data;
-      localStorage.setItem('albums', JSON.stringify(albums));
-      createAlbumCards(albums);
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    albums = data;
+    createAlbumCards(albums);
+    const lastSong = JSON.parse(localStorage.getItem('lastSong'));
+    if (lastSong) {
+      loadSong(lastSong.albumIndex, lastSong.songIndex);
+    } else {
       updatePlayer();
-    })
-    .catch(error => console.error('Error loading data:', error));
-} else {
-  albums = JSON.parse(localStorage.getItem('albums'));
-}
-
-createAlbumCards(albums);
-updatePlayer();
+    }
+    filterCards();
+  })
+  .catch(error => console.error('Error loading data:', error));
 
 function filterCards() {
   const input = document.getElementById('searchInput').value.toLowerCase();
