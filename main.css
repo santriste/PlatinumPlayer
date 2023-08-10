@@ -23,7 +23,7 @@ body {
 .container{
     padding-left: 90px;
 }
-
+/*--------------------------------------------------------------------------------cards------------------------------------------------------------------------------------*/
 .card {
     border: 1px solid black;
     border-radius: 20px;
@@ -67,6 +67,22 @@ body {
 .btn-primary {
     margin-top: auto;
 }
+/*--------------------------------------------------------------------------------footer------------------------------------------------------------------------------------*/
+
+#audioPlayer {
+    width: 1000px; 
+    
+  }
+.player-title  {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100px; 
+  }
+  .player-artist {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100px;  /* Ajusta este valor según tu diseño */
+}
 
 .footer-player {
     color: rgb(0, 0, 0);
@@ -79,6 +95,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
+    
 }
 
 .footer-player .player-info {
@@ -93,6 +110,7 @@ body {
 
 .footer-player .player-details {
     margin-left: 10px;
+    width: 150px; 
 }
 
 .footer-player .player-title {
@@ -118,6 +136,7 @@ body {
     background-color: #dad8d8;
     color: #000000;
 }
+/*--------------------------------------------------------------------------------buscador------------------------------------------------------------------------------------*/
 .custom-navbar {
     position: fixed;
     top: 0;
@@ -147,4 +166,5 @@ body {
 .custom-input:focus {
     border-color: #000000; 
 }
+
 

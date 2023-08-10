@@ -17,7 +17,7 @@ function createAlbumCards(albums) {
     card.classList.add('col-md-4', 'mb-4');
     card.innerHTML = `
         <div class="card" data-title="${album.title}" data-artist="${album.artist}">
-            <img src="${album.thumbnail}" alt="${album.title} - ${album.artist}" class="card-img-top">
+            <img src="${album.thumbnail}" alt="${album.title} - ${album.artist}" class="card-img-top")">
             <div class="card-body">
                 <h5 class="card-title">${album.title}</h5>
                 <p class="card-text">${album.artist}</p>
@@ -110,3 +110,34 @@ function filterCards() {
 }
 
 document.getElementById('searchInput').addEventListener('input', filterCards);
+
+
+/* ---------------------------------------------------------------------sweetalert-------------------------------------------------------------------------------------------------*/
+function showPlaybackNotification(albumIndex, songIndex) {
+  const currentAlbum = albums[albumIndex];
+  const currentSong = currentAlbum.songs[songIndex];
+  const notificationText = `${currentAlbum.title}, de la banda: ${currentAlbum.artist}`;
+
+  Swal.fire({
+    icon: 'success',
+    title: 'ESTÁS ESCUCHANDO',
+    text: notificationText,
+    timer: 5000,
+  });
+}
+
+function loadSong(albumIndex, songIndex) {
+  currentAlbumIndex = albumIndex;
+  currentSongIndex = songIndex;
+  const currentAlbum = albums[currentAlbumIndex];
+  const currentSong = currentAlbum.songs[currentSongIndex];
+
+  localStorage.setItem('lastSong', JSON.stringify({ albumIndex, songIndex }));
+
+  audioSource.src = currentSong;
+  audioPlayer.load();
+  audioPlayer.play();
+  updatePlayer();
+
+  showPlaybackNotification(albumIndex, songIndex); 
+}
