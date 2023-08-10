@@ -21,7 +21,7 @@ function createAlbumCards(albums) {
             <div class="card-body">
                 <h5 class="card-title">${album.title}</h5>
                 <p class="card-text">${album.artist}</p>
-                <a class="btn btn-success" onclick="loadSong(${index}, 0)">Play</a>
+                <a class="btn btn-success" onclick="loadSong(${index}, 0); showPlaybackNotification(${index}, 0); ">Play</a>
             </div>
         </div>
     `;
@@ -139,5 +139,4 @@ function loadSong(albumIndex, songIndex) {
   audioPlayer.play();
   updatePlayer();
 
-  showPlaybackNotification(albumIndex, songIndex); 
 }
